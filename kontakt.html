@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontakt - Restoran Biser</title>
+  <link rel="stylesheet" href="style.css" />
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="language-switcher">
+      <a href="#" class="lang-link active" data-lang="bos">BOS</a>
+      <span>|</span>
+      <a href="#" class="lang-link" data-lang="eng">ENG</a>
+    </div>
+
+ <div class="logo-container">
+  <img src="images/biserrr (1) (1).png" alt="Biser Logo" class="logo-img">
+</div>
+<span class="logo-text" data-translate="nav_logo">Restoran Biser</span>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" data-translate="nav_home">Početna</a></li>
+        <li><a href="meni.html" data-translate="nav_menu">Meni</a></li>
+        <li><a href="o-nama.html" data-translate="nav_about">O nama</a></li>
+        <li><a href="kontakt.html" class="active" data-translate="nav_contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="contact-hero">
+  <div class="contact-hero-overlay"></div>
+  <div class="contact-hero-content">
+    <h1 data-translate="contact_hero_title">Kontaktirajte nas</h1>
+    <p data-translate="contact_hero_description">Tu smo za sve vaše potrebe i pitanja</p>
+  </div>
+</section>
+
+<!-- Main Contact Section -->
+<section class="contact-main">
+  <div class="contact-container">
+    
+    <!-- Contact Information -->
+    <div class="contact-info">
+      <h2 data-translate="contact_info_title">Kako do nas</h2>
+      <p data-translate="contact_info_description">Restoran Biser se nalazi u srcu Pokoja, lako dostupan iz svih pravaca. Kontaktirajte nas putem telefona, emaila ili nas direktno posjetite.</p>
+      
+      <div class="contact-methods">
+        
+        <div class="contact-method">
+         
+          <div class="contact-details">
+            <span class="contact-label" data-translate="contact_address_label">Adresa</span>
+            <div class="contact-value">
+              <strong>Teritorijalne odbrane, Pokoj 77209</strong><br>
+              <span data-translate="contact_address_note">Blizu centra grada</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-method">
+        
+          <div class="contact-details">
+            <span class="contact-label" data-translate="contact_phone_label">Telefon</span>
+            <div class="contact-value">
+              <a href="tel:+387037300400">037 300-400</a><br>
+              <span data-translate="contact_phone_note">Rezervacije i informacije</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-method">
+         
+          <div class="contact-details">
+            <span class="contact-label" data-translate="contact_email_label">Email</span>
+            <div class="contact-value">
+              <a href="mailto:info@restoranbiser.ba">info@restoranbiser.ba</a><br>
+              <span data-translate="contact_email_note">Za sve upite i rezervacije</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-method">
+        
+          <div class="contact-details">
+            <span class="contact-label" data-translate="contact_hours_label">Radno vrijeme</span>
+            <div class="contact-value">
+              <strong data-translate="contact_hours_daily">Dnevno: 08:00 - 23:00</strong><br>
+              <span data-translate="contact_hours_note">Otvoreno svih dana u godini</span>
+            </div>
+          </div>
+        </div>
+
+       
+
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form-section">
+      <h2 data-translate="contact_form_title">Pošaljite nam poruku</h2>
+      <p class="form-intro" data-translate="contact_form_intro">Popunite formu ispod i odgovoriće vam u najkraćem roku.</p>
+      
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name" data-translate="form_name">Ime i prezime *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone" data-translate="form_phone">Telefon *</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email" data-translate="form_email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="subject" data-translate="form_subject">Tema</label>
+            <select id="subject" name="subject">
+              <option value="" data-translate="form_subject_select">Izaberite temu</option>
+              <option value="reservation" data-translate="form_subject_reservation">Rezervacija stola</option>
+              <option value="event" data-translate="form_subject_event">Organizacija događaja</option>
+              <option value="catering" data-translate="form_subject_catering">Catering usluge</option>
+              <option value="complaint" data-translate="form_subject_complaint">Žalba ili prijedlog</option>
+              <option value="info" data-translate="form_subject_info">Opće informacije</option>
+              <option value="other" data-translate="form_subject_other">Ostalo</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group full-width">
+          <label for="message" data-translate="form_message">Poruka *</label>
+          <textarea id="message" name="message" required data-translate="form_message_placeholder" placeholder="Opišite vaš upit ili zahtjev..."></textarea>
+        </div>
+        
+        <button type="submit" class="form-submit">
+          <span data-translate="form_submit">Pošalji poruku</span>
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Map Section -->
+<section class="map-section">
+  <div class="map-container">
+    <div class="map-header">
+      <h2 data-translate="map_title">Naša lokacija</h2>
+      <p data-translate="map_description">Restoran Biser se nalazi u Pokoju, lako dostupan glavnim putevima sa dovoljno parking prostora.</p>
+    </div>
+    
+    <div class="map-embed">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2828.3610234928055!2d15.879492775527632!3d44.85494467107057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476140c616f3061b%3A0x1f8db135a0cdb615!2sRestoran%20Biser!5e0!3m2!1shr!2sba!4v1759058010609!5m2!1shr!2sba" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+       
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <!-- Lijeva kolona -->
+    <div class="footer-left">
+      <div class="footer-logo">
+        <img src="images/biserrr (1) (1).png" alt="Biser Logo" class="footer-logo-img">
+        <span>Restoran Biser</span>
+      </div>
+      
+      <div class="footer-info">
+        <div class="footer-contact">
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span data-translate="location_value">Teritorijalne odbrane, Pokoj 77209</span>
+          </div>
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12,6 12,12 16,14"/>
+            </svg>
+            <span data-translate="footer_hours">Radno vrijeme: 8-23</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Desna kolona -->
+    <div class="footer-right">
+      <h3 data-translate="footer_social">Kontaktirajte nas</h3>
+      
+      <div class="social-links">
+        <a href="https://www.facebook.com/RestoranBiser/?locale=hr_HR" class="social-link" target="_blank" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/restoran_biser1978" class="social-link" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+      </div>
+      
+      <div class="footer-contact-methods">
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <a href="tel:037300400" data-translate="phone_value">037 300-400</a>
+        </div>
+        
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <a href="mailto:info@restoranbiser.ba">info@restoranbiser.ba</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p data-translate="footer_copyright">&copy; 2025 Restoran Biser | Sva prava zadržana</p>
+    </div>
+  </div>
+</footer>
+
+<script src="translations.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+</html>

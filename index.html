@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restoran Biser - Luxury Dining Experience</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+ <header>
+  <div class="header-container">
+    <div class="language-switcher">
+      <a href="#" class="lang-link active" data-lang="bos">BOS</a>
+      <span>|</span>
+      <a href="#" class="lang-link" data-lang="eng">ENG</a>
+    </div>
+
+    <div class="logo-container">
+  <img src="images/biserrr (1) (1).png" alt="Biser Logo" class="logo-img">
+</div>
+<span class="logo-text" data-translate="nav_logo">Restoran Biser</span>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" data-translate="nav_home">Početna</a></li>
+        <li><a href="meni.html" data-translate="nav_menu">Meni</a></li>
+        <li><a href="o-nama.html" data-translate="nav_about">O nama</a></li>
+        <li><a href="kontakt.html" data-translate="nav_contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 data-translate="hero_title">Dobrodošli u Biser</h1>
+      <h3 data-translate="hero_subtitle">Uz Vas od 1978!</h3>
+      <p data-translate="hero_description">Ekskluzivan restoran i svadbeni salon za vaše najvažnije trenutke</p>
+      <a href="meni.html" class="btn">
+        <span data-translate="hero_cta">Pogledaj meni</span>
+        <div class="btn-shine"></div>
+      </a>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about-overlay"></div>
+    <div class="about-content">
+      <div class="section-header">
+        <span class="section-subtitle" data-translate="about_subtitle">Naša priča</span>
+        <h2 data-translate="about_title">O restoranu</h2>
+        <div class="divider"></div>
+      </div>
+      <p data-translate="about_description">Restoran Biser nudi spoj vrhunske gastronomije, elegantnog ambijenta i besprijekorne usluge. Idealno mjesto za vjenčanja, rođendane, poslovne ručkove, porodična okupljanja i svečane proslave.</p>
+      <p class="highlight-text" data-translate="about_highlight">Restoran Biser tu je uz Vas od 1978. godine, bez konkurencije u organizaciji i cateringu koje pruža dugi niz godina.</p>
+    </div>
+  </section>
+
+  <section class="weddings">
+    <div class="weddings-container">
+      <div class="weddings-text">
+        <div class="section-header">
+          <span class="section-subtitle" data-translate="weddings_subtitle">Ekskluzivno</span>
+          <h2 data-translate="weddings_title">Svadbeni salon</h2>
+          <div class="divider"></div>
+        </div>
+        <p data-translate="weddings_description">Organizujemo nezaboravne vjenčanja i svečanosti u luksuznom ambijentu. Velik izbor jela, vrhunska usluga, muzika uživo, savršena je kombinacija da provedete Vaš najbitniji dan na najbolji mogući način.</p>
+        <div class="luxury-features">
+          <div class="feature-item">
+            <div class="feature-icon">✧</div>
+            <span data-translate="feature_personalized">Personalizovana usluga</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✧</div>
+            <span data-translate="feature_catering">Catering</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✧</div>
+            <span data-translate="feature_gourmet">Gourmet kuhinja</span>
+          </div>
+        </div>
+      </div>
+      <div class="weddings-image">
+        <div class="wedding-carousel">
+          <div class="carousel-container">
+            <div class="carousel-slides">
+              <div class="carousel-slide active">
+                <img src="images/biser_wedding.jpg" alt="Svadbeni salon - Gostinjska knjiga" />
+                <div class="slide-overlay"></div>
+              </div>
+              <div class="carousel-slide">
+                <img src="images/biser_guestbook.jpg" alt="Svadbeni salon - Proslava" />
+                <div class="slide-overlay"></div>
+              </div>
+              <div class="carousel-slide">
+                <img src="images/biser_restoran.jpg" alt="Svadbeni salon - Elegantno pokrivanje stola" />
+                <div class="slide-overlay"></div>
+              </div>
+              <div class="carousel-slide">
+                <img src="images/biser_catering1.jpg" alt="Svadbeni salon - Raskošan buffet" />
+                <div class="slide-overlay"></div>
+              </div>
+              <div class="carousel-slide">
+                <img src="images/biser.png" alt="Svadbeni salon - Cvetna dekoracija" />
+                <div class="slide-overlay"></div>
+              </div>
+              <div class="carousel-slide">
+                <img src="images/biser_wine.png" alt="Svadbeni salon - Cvetna dekoracija" />
+                <div class="slide-overlay"></div>
+              </div>
+            </div>
+            
+            <button class="carousel-btn carousel-prev" aria-label="Prethodna slika">
+              <span>‹</span>
+            </button>
+            <button class="carousel-btn carousel-next" aria-label="Sljedeća slika">
+              <span>›</span>
+            </button>
+          </div>
+          
+          <div class="carousel-dots">
+            <button class="carousel-dot active" data-slide="0" aria-label="Slika 1"></button>
+            <button class="carousel-dot" data-slide="1" aria-label="Slika 2"></button>
+            <button class="carousel-dot" data-slide="2" aria-label="Slika 3"></button>
+            <button class="carousel-dot" data-slide="3" aria-label="Slika 4"></button>
+            <button class="carousel-dot" data-slide="4" aria-label="Slika 5"></button>
+            <button class="carousel-dot" data-slide="5" aria-label="Slika 6"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-preview">
+    <div class="menu-overlay"></div>
+    <div class="menu-content">
+      <div class="section-header">
+        <span class="section-subtitle" data-translate="menu_subtitle">Kulinarsko iskustvo</span>
+        <h2 data-translate="menu_title">Naš meni</h2>
+        <div class="divider"></div>
+      </div>
+      <p data-translate="menu_description">Isprobajte naše specijalitete – od tradicionalne kuhinje do modernih gourmet jela.</p>
+      <a href="meni.html" class="btn btn-outline">
+        <span data-translate="menu_cta">Pogledaj cijeli meni</span>
+        <div class="btn-shine"></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="awards">
+    <div class="awards-container">
+      <div class="section-header">
+        <span class="section-subtitle" data-translate="awards_subtitle">Priznanja</span>
+        <h2 data-translate="awards_title">Naša izvrsnost</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="awards-grid">
+        <div class="award-item">
+          <div class="award-icon">★</div>
+          <h4 data-translate="award1_title">Premium kvalitet</h4>
+          <p data-translate="award1_desc">Vrhunski sastojci i profesionalna priprema</p>
+        </div>
+        <div class="award-item">
+          <div class="award-icon">♔</div>
+          <h4 data-translate="award2_title">Luksuzni ambijent</h4>
+          <p data-translate="award2_desc">Elegantno uređenje i neprocjenjiva atmosfera</p>
+        </div>
+        <div class="award-item">
+          <div class="award-icon">◆</div>
+          <h4 data-translate="award3_title">Tradicija od 1978</h4>
+          <p data-translate="award3_desc">Više od 45 godina iskustva i povjerenja</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="reservation">
+  <div class="reservation-overlay"></div>
+  <div class="reservation-container">
+    <div class="reservation-content">
+      <div class="section-header">
+        <span class="section-subtitle" data-translate="reservation_subtitle">Rezervišite termin</span>
+        <h2 data-translate="reservation_title">Rezervacija sale</h2>
+        <div class="divider"></div>
+      </div>
+      <p class="reservation-intro" data-translate="reservation_intro">Rezervišite našu luksuznu salu za vaš poseban događaj. Kontaktirajte nas i kreirajmo zajedno nezaboravan doživljaj.</p>
+    </div>
+    
+    <div class="reservation-form-container">
+    <form class="reservation-form" id="reservationForm" method="POST" action="/reservation">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name" data-translate="form_name">Ime i prezime</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone" data-translate="form_phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email" data-translate="form_email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="event-type" data-translate="form_event_type">Tip događaja</label>
+            <select id="event-type" name="event-type" required>
+              <option value="" data-translate="select_event">Izaberite tip događaja</option>
+              <option value="vjencanje" data-translate="event_wedding">Vjenčanje</option>
+              <option value="rodendan" data-translate="event_birthday">Rođendan</option>
+              <option value="godisnjica" data-translate="event_anniversary">Godišnjica</option>
+              <option value="poslovno" data-translate="event_business">Poslovni događaj</option>
+              <option value="ostalo" data-translate="event_other">Ostalo</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="event-date" data-translate="form_event_date">Datum događaja</label>
+            <input type="date" id="event-date" name="event-date" required>
+          </div>
+          <div class="form-group">
+            <label for="guests" data-translate="form_guests">Broj gostiju</label>
+            <select id="guests" name="guests" required>
+              <option value="" data-translate="select_guests">Broj gostiju</option>
+              <option value="do-50" data-translate="guests_50">Do 50 gostiju</option>
+              <option value="50-100" data-translate="guests_50_100">50-100 gostiju</option>
+              <option value="100-150" data-translate="guests_100_150">100-150 gostiju</option>
+              <option value="150-200" data-translate="guests_150_200">150-200 gostiju</option>
+              <option value="vise-200" data-translate="guests_200_plus">Više od 200 gostiju</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group full-width">
+          <label for="message" data-translate="form_message">Dodatne napomene</label>
+          <textarea id="message" name="message" rows="4" data-translate="form_message_placeholder" placeholder="Opišite vaše želje i zahtjeve za događaj..."></textarea>
+        </div>
+        
+        <div class="form-actions">
+         <button type="submit" class="btn btn-reservation form-submit">
+            <span data-translate="form_submit">Pošaljite zahtjev</span>
+            <div class="btn-shine"></div>
+          </button>
+          <p class="form-note" data-translate="form_note">Kontaktiraćemo vas u roku od 24 sata</p>
+        </div>
+        <div id="formResponse" class="form-response"></div>
+
+      </form>
+      
+      <div class="reservation-contact">
+        <div class="contact-info">
+          <h3 data-translate="contact_direct">Ili nas direktno kontaktirajte</h3>
+          <div class="contact-methods">
+            <div class="contact-method">
+              
+              <div class="contact-details">
+                <span class="contact-label" data-translate="contact_phone">Telefon</span>
+                <span class="contact-value" data-translate="phone_value">037 300-400</span>
+              </div>
+            </div>
+            <div class="contact-method">
+             
+              <div class="contact-details">
+                <span class="contact-label" data-translate="contact_hours">Radno vrijeme</span>
+                <span class="contact-value" data-translate="hours_value">8:00 - 23:00</span>
+              </div>
+            </div>
+            <div class="contact-method">
+              
+              <div class="contact-details">
+                <span class="contact-label" data-translate="contact_location">Lokacija</span>
+                <span class="contact-value" data-translate="location_value">Teritorijalne odbrane, Pokoj</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <!-- Lijeva kolona -->
+    <div class="footer-left">
+      <div class="footer-logo">
+        <img src="images/biserrr (1) (1).png" alt="Biser Logo" class="footer-logo-img">
+        <span>Restoran Biser</span>
+      </div>
+      
+      <div class="footer-info">
+        <div class="footer-contact">
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span data-translate="location_value">Teritorijalne odbrane, Pokoj 77209</span>
+          </div>
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12,6 12,12 16,14"/>
+            </svg>
+            <span data-translate="footer_hours">Radno vrijeme: 8-23</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Desna kolona -->
+    <div class="footer-right">
+      <h3 data-translate="footer_social">Kontaktirajte nas</h3>
+      
+      <div class="social-links">
+        <a href="https://www.facebook.com/RestoranBiser/?locale=hr_HR" class="social-link" target="_blank" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/restoran_biser1978" class="social-link" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+      </div>
+      
+      <div class="footer-contact-methods">
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <a href="tel:037300400" data-translate="phone_value">037 300-400</a>
+        </div>
+        
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <a href="mailto:info@restoranbiser.ba">info@restoranbiser.ba</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p data-translate="footer_copyright">&copy; 2025 Restoran Biser | Sva prava zadržana</p>
+    </div>
+  </div>
+</footer>
+
+  
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

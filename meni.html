@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meni - Restoran Biser</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+ <header>
+  <div class="header-container">
+    <div class="language-switcher">
+      <a href="#" class="lang-link active" data-lang="bos">BOS</a>
+      <span>|</span>
+      <a href="#" class="lang-link" data-lang="eng">ENG</a>
+    </div>
+
+  <div class="logo-container">
+  <img src="images/biserrr (1) (1).png" alt="Biser Logo" class="logo-img">
+</div>
+<span class="logo-text" data-translate="nav_logo">Restoran Biser</span>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" data-translate="nav_home">Početna</a></li>
+        <li><a href="meni.html" data-translate="nav_menu">Meni</a></li>
+        <li><a href="o-nama.html" data-translate="nav_about">O nama</a></li>
+        <li><a href="kontakt.html" data-translate="nav_contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+  <!-- Menu Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 data-translate="menu_hero_title">Naš Meni</h1>
+      <p data-translate="menu_hero_subtitle">Iskusite vrhunske specijalitete naše kuhinje</p>
+    </div>
+  </section>
+
+  <!-- Menu Navigation -->
+  <section class="nav">
+    <div class="nav-container">
+      <div class="menu-nav-item">
+        <button class="menu-nav-btn active" data-category="all" data-translate="nav_all">Svi</button>
+      </div>
+      
+      <div class="menu-nav-item dropdown">
+        <button class="menu-nav-btn dropdown-btn" data-category="predjela" data-translate="nav_appetizers">
+          Predjela <span class="dropdown-arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="#" data-category="hladna-predjela" data-translate="cold_appetizers">Hladna predjela</a>
+          <a href="#" data-category="topla-predjela" data-translate="hot_appetizers">Topla predjela</a>
+          <a href="#" data-category="juhe-corbe" data-translate="soups_stews">Juhe i čorbe</a>
+        </div>
+      </div>
+
+      <div class="menu-nav-item dropdown">
+        <button class="menu-nav-btn dropdown-btn" data-category="glavna-jela" data-translate="nav_main_dishes">
+          Glavna jela <span class="dropdown-arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="#" data-category="rostilj" data-translate="grilled_dishes">Jela sa roštilja</a>
+          <a href="#" data-category="po-narudzbi" data-translate="made_to_order">Jela po narudžbi</a>
+          <a href="#" data-category="riblji" data-translate="fish_specialties">Riblji specijaliteti</a>
+          <a href="#" data-category="planstek" data-translate="planstek">Planstek</a>
+          <a href="#" data-category="biftek" data-translate="steak">Biftek</a>
+          <a href="#" data-category="pecenja" data-translate="roasts">Pečenja</a>
+        </div>
+      </div>
+
+      <div class="menu-nav-item">
+        <button class="menu-nav-btn" data-category="pizza" data-translate="pizza">Pizza</button>
+      </div>
+
+      <div class="menu-nav-item dropdown">
+        <button class="menu-nav-btn dropdown-btn" data-category="salate" data-translate="nav_salads">
+          Salate <span class="dropdown-arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="#" data-category="salate-kao-jela" data-translate="salads_main">Salate kao jela</a>
+          <a href="#" data-category="salate-kao-predjela" data-translate="salads_appetizers">Salate kao predjela</a>
+        </div>
+      </div>
+      <div class="menu-nav-item">
+        <button class="menu-nav-btn" data-category="desert" data-translate="desserts">Desert</button>
+      </div>
+
+      <div class="menu-nav-item dropdown">
+        <button class="menu-nav-btn dropdown-btn" data-category="dodaci" data-translate="nav_sides">
+          Dodaci i prilozi <span class="dropdown-arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="#" data-category="prilozi" data-translate="side_dishes">Prilozi</a>
+          <a href="#" data-category="pogacice" data-translate="stuffed_rolls">Pogačice</a>
+          <a href="#" data-category="peciva" data-translate="pastries">Peciva</a>
+        </div>
+      </div>
+
+      <div class="menu-nav-item dropdown">
+        <button class="menu-nav-btn dropdown-btn" data-category="pica" data-translate="nav_drinks">
+          Pića <span class="dropdown-arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="#" data-category="topli-napici" data-translate="hot_drinks">Topli napici</a>
+          <a href="#" data-category="negazirani" data-translate="non_carbonated">Negazirani napici</a>
+          <a href="#" data-category="gazirani" data-translate="soft_drinks">Gazirani napici</a>
+          <a href="#" data-category="pivo" data-translate="beer">Pivo</a>
+          <a href="#" data-category="vina" data-translate="wines">Vina</a>
+          <a href="#" data-category="likeri" data-translate="liqueurs">Likeri</a>
+          <a href="#" data-category="zestoka" data-translate="spirits">Žestoka pića</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Content -->
+  <section class="menu-content">
+    <div class="menu-container">
+      
+      <!-- Hladna Predjela -->
+      <div class="menu-category" data-category="hladna-predjela">
+        <div class="category-header">
+          <h2 data-translate="cold_appetizers">Hladna Predjela</h2>
+          <span class="category-subtitle"></span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="travnik_cheese">Travnički sir (150g)</h4>
+              <span class="price">12,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="livno_cheese">Livanjski sir (100g)</h4>
+              <span class="price">12,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="smoked_beef">Goveđi pršut (100g)</h4>
+              <span class="price">15,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="kulen">Kulen (100g)</h4>
+              <span class="price">8,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="kajmak">Kajmak (100g)</h4>
+              <span class="price">8,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="cold_platter_biser">Hladna plata BISER</h4>
+              <span class="price">65,00 KM</span>
+            </div>
+            <p class="description" data-translate="cold_platter_desc">Goveđi pršut, razni sirevi, kajmak, masline, kulen, uštipci</p>
+            <small></small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Topla Predjela -->
+      <div class="menu-category" data-category="topla-predjela">
+        <div class="category-header">
+          <h2 data-translate="hot_appetizers">Topla Predjela</h2>
+          <span class="category-subtitle"></span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="cheese_omelette">Omlet sa sirom</h4>
+              <span class="price">8,50 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="mushroom_omelette">Omlet sa gljivama</h4>
+              <span class="price">8,50 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+            <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="turkey_omelette">Omlet sa puretinom</h4>
+              <span class="price">10,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="bosnian_cilbur">Bosanski čilbur</h4>
+              <span class="price">10,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="meat_fritters">Mesni uštipci</h4>
+              <span class="price">12,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="polenta">Palenta</h4>
+              <span class="price">10,00 KM</span>
+            </div>
+            <p class="description" data-translate="polenta_desc">Pavlaka, sir, maslo</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Juhe i Čorbe -->
+      <div class="menu-category" data-category="juhe-corbe">
+        <div class="category-header">
+          <h2 data-translate="soups_stews">Juhe i Čorbe</h2>
+          <span class="category-subtitle"></span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="mushroom_soup">Krem čorba od gljiva</h4>
+              <span class="price">5,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="homemade_trahana">Domaća trahana</h4>
+              <span class="price">5 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="bey_soup">Begova čorba</h4>
+              <span class="price">6 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="beef_noodle_soup">Goveđa juha sa rezancima</h4>
+              <span class="price">5 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jela sa Roštilja -->
+      <div class="menu-category" data-category="rostilj">
+        <div class="category-header">
+          <h2 data-translate="grilled_dishes">Jela sa Roštilja</h2>
+          <span class="category-subtitle">Grilled Dishes</span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="cevapi">Ćevapi</h4>
+              <span class="price">12 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="beef_patty">Pljeskavica</h4>
+              <span class="price">13 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="stuffed_patty">Punjena pljeskavica</h4>
+              <span class="price">16 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="biser_patty">Biser pljeskavica</h4>
+              <span class="price">21 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="veal_skewers">Teleći ražnjići</h4>
+              <span class="price">18 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+        <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="veal_liver">Teleća jetrica</h4>
+              <span class="price">14 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="veal_chop">Teleća krmenadla</h4>
+              <span class="price">29 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="chicken_fillet">Pileći file</h4>
+              <span class="price">14 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="chicken_thigh">Pileći batak (bez kosti)</h4>
+              <span class="price">12 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="mixed_grill_small">Mješano meso (mezetluk)</h4>
+              <span class="price">30 KM</span>
+            </div>
+            <p class="description"></p>
+            <small></small>
+          </div>
+         <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="mixed_grill">Mješano meso</h4>
+              <span class="price">38 KM</span>
+            </div>
+            <p class="description" data-translate="mixed_grill_desc">Krmenadla,ražnjići, pljeskavica, file,
+ćevapi, lepinja, pomfrit</p>
+            <small></small>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="biser_meat_platter">Biser mesna plata</h4>
+              <span class="price">65 KM</span>
+            </div>
+            <p class="description"></p>
+            <small></small>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="biser_una_platter">Biser Una plata</h4>
+              <span class="price">140 KM</span>
+            </div>
+            <p class="description"></p>
+            <small></small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jela po Narudžbi -->
+      <div class="menu-category" data-category="po-narudzbi">
+        <div class="category-header">
+          <h2 data-translate="made_to_order">Jela po Narudžbi</h2>
+          <span class="category-subtitle">Main Dishes</span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+              <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="natur_schnitzel">Natur šnicla</h4>
+              <span class="price">21 KM</span>
+            </div>
+            <p class="description">200g, prilog po želji</p>
+          </div>
+        <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="hunter_schnitzel">Lovačka šnicla</h4>
+              <span class="price">25 KM</span>
+            </div>
+            <p class="description">200g, lovački sos, prilog po želji</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="mushroom_schnitzel">Šampinjon šnicla</h4>
+              <span class="price">24 KM</span>
+            </div>
+            <p class="description">200g, šampinjoni sa žara, prilog po želji</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="wiener_schnitzel">Bečka šnicla</h4>
+              <span class="price">23 KM</span>
+            </div>
+            <p class="description">200g, pomfrit</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="cordon_bleu">Cordon Blue</h4>
+              <span class="price">28 KM</span>
+            </div>
+            <p class="description">200g mesa, šunka, prilog po želji</p>
+          </div>
+          
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="steak_menu">Biftek</h4>
+              <span class="price">49 KM</span>
+            </div>
+            <p class="description">200g bifteka, prilog po želji</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="steak_green_pepper">Biftek u zelenom papru</h4>
+              <span class="price">55 KM</span>
+            </div>
+            <p class="description">200g bifteka, pfeffer sos, prilog po želji</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="rump_steak">Ramstek</h4>
+              <span class="price">28 KM</span>
+            </div>
+            <p class="description">200g, prilog po želji</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="chicken_hunter">Pileći file na lovački</h4>
+              <span class="price">19 KM</span>
+            </div>
+            <p class="description">180g pilećeg mesa, paprika, šampinjoni,
+luk, prilog po želji</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Riblji Specijaliteti -->
+      <div class="menu-category" data-category="riblji">
+        <div class="category-header">
+          <h2 data-translate="fish_specialties">Riblji Specijaliteti</h2>
+          <span class="category-subtitle">Fish Dishes</span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="una_trout">Unska pastrmka</h4>
+              <span class="price">22 KM</span>
+            </div>
+            <p class="description">Trščanski, pomfrit, povrće</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="una_trout_piece">Unska pastrmka (1kom)</h4>
+              <span class="price">15 KM</span>
+            </div>
+            <p class="description">Trščanski, pomfrit, povrće</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="sea_bream">Orada sa povrćem</h4>
+              <span class="price">24 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="grilled_squid">Lignje sa žara</h4>
+              <span class="price">24 KM</span>
+            </div>
+            <p class="description">Krompir salata</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="fried_squid">Lignje frigirane</h4>
+              <span class="price">22 KM</span>
+            </div>
+            <p class="description">Pomfrit, tartas sos</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="breaded_hake">Pohovani filet oslića</h4>
+              <span class="price">18,50 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Planstek -->
+      <div class="menu-category" data-category="planstek">
+        <div class="category-header">
+          <h2 data-translate="planstek">Planstek</h2>
+          <span class="category-subtitle">Planstek</span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="planstek_chicken">Planstek sa pilećim filetom</h4>
+              <span class="price">19 KM</span>
+            </div>
+            <p class="description">200g</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="planstek_veal">Planstek sa teletinom</h4>
+              <span class="price">26 KM</span>
+            </div>
+            <p class="description">200g</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="planstek_beef">Planstek sa biftekom</h4>
+              <span class="price">45 KM</span>
+            </div>
+            <p class="description">200g</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="planstek_rump">Planstek sa ramstekom</h4>
+              <span class="price">35 KM</span>
+            </div>
+            <p class="description">200g</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="biser_pan">Biser tava</h4>
+              <span class="price">35 KM</span>
+            </div>
+            <p class="description"></p>
+            <small></small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Biftek -->
+      <div class="menu-category" data-category="biftek">
+        <div class="category-header">
+          <h2 data-translate="steak">Biftek</h2>
+          <span class="category-subtitle">Steak</span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="rump_steak">Ramstek</h4>
+              <span class="price">28 KM</span>
+            </div>
+            <p class="description">200g</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="steak_250">Biftek sa žara</h4>
+              <span class="price">49 KM</span>
+            </div>
+            <p class="description">200g</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="steak_green_pepper">Biftek u zelenom papru</h4>
+              <span class="price">55 KM</span>
+            </div>
+            <p class="description">200g mesa, pfeffer sos, prilog po želji</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="steak_mushrooms">Biftek sa gljivama</h4>
+              <span class="price">50 KM</span>
+            </div>
+            <p class="description">200g</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pečenja -->
+      <div class="menu-category" data-category="pecenja">
+        <div class="category-header">
+          <h2 data-translate="roasts">Pečenja</h2>
+          <span class="category-subtitle">Roasts</span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="roast_lamb_kg">Janjetina sa ražnja</h4>
+              <span class="price">60 KM</span>
+            </div>
+            <p class="description">1kg</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="roast_lamb_portion">Janjetina sa ražnja</h4>
+              <span class="price">18 KM</span>
+            </div>
+            <p class="description">porcija 300g</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="veal_sac_kg">Teletina ispod sača</h4>
+              <span class="price">55 KM</span>
+            </div>
+            <p class="description">prilog krompir / za dvije osobe</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="veal_sac_portion">Teletina ispod sača</h4>
+              <span class="price">23 KM</span>
+            </div>
+            <p class="description">porcija 300g</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pizza -->
+      <div class="menu-category" data-category="pizza">
+        <div class="category-header">
+          <h2 data-translate="pizza">Pizza</h2>
+          <span class="category-subtitle">Authentic Italian Style</span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="margherita">Margherita</h4>
+              <span class="price">12,50 KM</span>
+            </div>
+            <p class="description" data-translate="margherita_desc">Paradajz sos, sir, origano</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="funghi">Funghi</h4>
+              <span class="price">14 KM</span>
+            </div>
+            <p class="description" data-translate="funghi_desc">Paradajz sos, sir, šampinjoni, origano</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="tono">Tono</h4>
+              <span class="price">15 KM</span>
+            </div>
+            <p class="description" data-translate="tono_desc">Paradajz sos, sir, tuna, origano</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="vegetarian">Vegetarijanska</h4>
+              <span class="price">15,50 KM</span>
+            </div>
+            <p class="description" data-translate="vegetarian_desc">Paradajz sos, sir, šampinjoni, paprika, origano</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="picante">Picante</h4>
+              <span class="price">15,50 KM</span>
+            </div>
+            <p class="description" data-translate="picante_desc">Paradajz sos, sir, šampinjoni, salama, origano</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="mozzarella">Mozzarella</h4>
+              <span class="price">15,50 KM</span>
+            </div>
+            <p class="description" data-translate="mozzarella_desc">Paradajz sos, sir, paradajz, mozzarella, bosiljak, origano</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="calzone">Calzone</h4>
+              <span class="price">15,50 KM</span>
+            </div>
+            <p class="description" data-translate="calzone_desc">Paradajz sos, sir, š. meso, šampinjoni, kajmak, origano</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="frutti_di_mare">Frutti di mare</h4>
+              <span class="price">16 KM</span>
+            </div>
+            <p class="description" data-translate="frutti_desc">Paradajz sos, sir, plodovi mora, bijeli luk, origano</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="capricciosa">Capricciosa</h4>
+              <span class="price">16,00 KM</span>
+            </div>
+            <p class="description" data-translate="capricciosa_desc">Paradajz sos, sir, šunka, šampinjoni, origano</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="mexicana">Mexicana</h4>
+              <span class="price">16,50 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Salate -->
+      <div class="menu-category" data-category="salate-kao-predjela">
+        <div class="category-header">
+          <h2 data-translate="salads_appetizers">Salate kao predjela</h2>
+          <span class="category-subtitle"></span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="fresh_salad">Svježa salata</h4>
+              <span class="price">5,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="fresh_salad_dressing">Svježa salata + dresing</h4>
+              <span class="price">6,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="shopska_salad">Šopska salata</h4>
+              <span class="price">7 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="menu-category" data-category="salate-kao-jela">
+        <div class="category-header">
+          <h2 data-translate="salads_main">Salate kao jela</h2>
+          <span class="category-subtitle"></span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="vitamin_salad">Vitaminska salata</h4>
+              <span class="price">14 KM</span>
+            </div>
+            <p class="description" data-translate="vitamin_desc">miješana salata, tunjevina, crveni grah, sir,
+kukuruz, praziluk</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="biser_salad">Biser salata</h4>
+              <span class="price">15 KM</span>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="caesar_salad">Cesar salata</h4>
+              <span class="price">15 KM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+      <div class="menu-category" data-category="prilozi">
+        <div class="category-header">
+          <h2 data-translate="side_dishes">Prilozi</h2>
+          <span class="category-subtitle"></span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="ajvar">Ajvar</h4>
+              <span class="price">2 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="mayonnaise">Majoneza</h4>
+              <span class="price">2 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="mixed_vegetables">Miješano povrće</h4>
+              <span class="price">4 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="mashed_potatoes">Pire krompir</h4>
+              <span class="price">4 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="french_fries">Pomfrit</h4>
+              <span class="price">4 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="mushroom_sauce">Sos od šampinjona</h4>
+              <span class="price">4 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="roasted_potatoes">Mladi pečeni krompir</h4>
+              <span class="price">4 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="pasta_side">Tjestenina</h4>
+              <span class="price">4 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="grilled_vegetables">Povrće sa žara</h4>
+              <span class="price">9 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="menu-category" data-category="pogacice">
+        <div class="category-header">
+          <h2 data-translate="stuffed_rolls">Pogačice</h2>
+          <span class="category-subtitle"></span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="roll_basic">Pogačica 1.</h4>
+              <span class="price">12,50 KM</span>
+            </div>
+            <p class="description" data-translate="roll_basic_desc">sir, kajmak, salata</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="roll_mushroom">Pogačica 2.</h4>
+              <span class="price">14,50 KM</span>
+            </div>
+            <p class="description" data-translate="roll_mushroom_desc">sir, kajmak, šampinjoni, salata</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="roll_turkey">Pogačica 3.</h4>
+              <span class="price">14,50 KM</span>
+            </div>
+            <p class="description" data-translate="roll_turkey_desc">sir, kajmak, pureća šunka, salata</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="roll_dried_meat">Pogačica 4.</h4>
+              <span class="price">14,50 KM</span>
+            </div>
+            <p class="description" data-translate="roll_dried_meat_desc">sir, kajmak, suho meso, salata</p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="roll_shrimp">Pogačica 5.</h4>
+              <span class="price">15,50 KM</span>
+            </div>
+            <p class="description" data-translate="roll_shrimp_desc">sir, kajmak, škamp, salata</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="menu-category" data-category="peciva">
+        <div class="category-header">
+          <h2 data-translate="pastries">Peciva</h2>
+          <span class="category-subtitle"></span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="bread">Kruh</h4>
+              <span class="price">1,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="flatbread">Lepinja</h4>
+              <span class="price">2,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="garlic_bread">Lepinja sa bijelim lukom</h4>
+              <span class="price">7 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="menu-category" data-category="desert">
+        <div class="category-header">
+          <h2 data-translate="desserts">Desert</h2>
+          <span class="category-subtitle"></span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="cake">Kolač</h4>
+              <span class="price">6,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="torte">Torta</h4>
+              <span class="price">6,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="fruit_salad">Biser voćna salata</h4>
+              <span class="price">6 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="pancakes">Palačinke</h4>
+              <span class="price">6 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="menu-category" data-category="topli-napici">
+        <div class="category-header">
+          <h2 data-translate="hot_drinks">Topli napici</h2>
+          <span class="category-subtitle"></span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="espresso">Espresso kafa</h4>
+              <span class="price">2,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="espresso_cream">Espresso kafa + šlag</h4>
+              <span class="price">2,50 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="tea_honey">Čaj + med</h4>
+              <span class="price">2,50 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="nescafe">Nescafe</h4>
+              <span class="price">3,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="hot_chocolate">Topla čokolada</h4>
+              <span class="price">3,50 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="menu-category" data-category="gazirani">
+        <div class="category-header">
+          <h2 data-translate="soft_drinks">Gazirana pića</h2>
+          <span class="category-subtitle"></span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="mineral_water">Mineralna voda</h4>
+              <span class="price">3,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="sensation">Sensation kisela</h4>
+              <span class="price">3,50 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="orangina">Orangina</h4>
+              <span class="price">4,50 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="pepsi">Pepsi</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="coca_cola">Coca Cola</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4>Fanta</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4>Tonik</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4>Bitter Lemon</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="cocta">Cocta</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4>Schweppes</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4>Energetsko piće</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="red_bull">Red Bull</h4>
+              <span class="price">6,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="menu-category" data-category="negazirani">
+        <div class="category-header">
+          <h2 data-translate="non_carbonated">Negazirana pića</h2>
+          <span class="category-subtitle"></span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="bottled_water">Flaširana voda</h4>
+              <span class="price">2,50 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="cedevita">Cedevita</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="blackcurrant">Crna ribizla</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="strawberry">Jagoda</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="peach">Breskva</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="apple">Jabuka</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="sour_cherry">Višnja</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="orange">Naranča</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="iced_tea">Ledeni čaj</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="fresh_lemonade">Prirodna limunada</h4>
+              <span class="price">5,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="fresh_orange">Cijeđena naranča</h4>
+              <span class="price">5,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="menu-category" data-category="pivo">
+        <div class="category-header">
+          <h2 data-translate="beer">Pivo</h2>
+          <span class="category-subtitle"></span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="ozujsko">Ožujsko</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="radler">Radler</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="preminger">Preminger</h4>
+              <span class="price">3,50 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="heineken">Heineken</h4>
+              <span class="price">5,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="menu-category" data-category="vina">
+        <div class="category-header">
+          <h2 data-translate="wines">Vina</h2>
+          <span class="category-subtitle"></span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="gemist">Gemišt</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description">0,2 l</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="grasevina">Graševina</h4>
+              <span class="price">7,00 KM</span>
+            </div>
+            <p class="description">0,2 l</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="vranac_procorde">Vranac Pro Corde</h4>
+              <span class="price">8,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="grasevina">Graševina</h4>
+              <span class="price">35,00 KM</span>
+            </div>
+            <p class="description">1 l</p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="vranac">Vranac</h4>
+              <span class="price">30,00 KM</span>
+            </div>
+            <p class="description">1 l</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="grasevina">Graševina</h4>
+              <span class="price">35,00 KM</span>
+            </div>
+            <p class="description">0,75 l</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="vranac">Vranac</h4>
+              <span class="price">30,00 KM</span>
+            </div>
+            <p class="description">0,75 l</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="vranac_procorde">Vranac Pro Corde</h4>
+              <span class="price">35,00 KM</span>
+            </div>
+            <p class="description">0,75 l</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="menu-category" data-category="likeri">
+        <div class="category-header">
+          <h2 data-translate="liqueurs">Likeri</h2>
+          <span class="category-subtitle"></span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="martini_bianco">Martini Bianco</h4>
+              <span class="price">5,50 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="campari">Campari</h4>
+              <span class="price">5,50 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-category" data-category="zestoka">
+        <div class="category-header">
+          <h2 data-translate="spirits">Žestoka pića</h2>
+          <span class="category-subtitle">0,03 l</span>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="apple_brandy">Jabuka</h4>
+              <span class="price">3,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="plum_brandy">Šljivovica</h4>
+              <span class="price">3,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="wormwood">Pelinkovac</h4>
+              <span class="price">3,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="pear_brandy">Viljamovka</h4>
+              <span class="price">3,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="vodka">Vodka</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="cherry_brandy">Višnjevac</h4>
+              <span class="price">3,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="stock">Stock</h4>
+              <span class="price">3,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="ballantines">Ballantines</h4>
+              <span class="price">5,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="jagermeister">Jägermeister</h4>
+              <span class="price">4,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="pear_brandy">Viljamovka</h4>
+              <span class="price">5,00 KM</span>
+            </div>
+            <p class="description">Fructal</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="jack_daniels">Jack Daniels</h4>
+              <span class="price">6,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="jim_beam">Jim Beam</h4>
+              <span class="price">5,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="black_label">Black Label</h4>
+              <span class="price">6,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="red_label">Red Label</h4>
+              <span class="price">6,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+           <div class="menu-item">
+            <div class="menu-item-header">
+              <h4 data-translate="chivas_regal">Chivas Regal</h4>
+              <span class="price">7,00 KM</span>
+            </div>
+            <p class="description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<footer>
+  <div class="footer-content">
+    <!-- Lijeva kolona -->
+    <div class="footer-left">
+      <div class="footer-logo">
+        <img src="images/biserrr (1) (1).png" alt="Biser Logo" class="footer-logo-img">
+        <span>Restoran Biser</span>
+      </div>
+      
+      <div class="footer-info">
+        <div class="footer-contact">
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span data-translate="location_value">Teritorijalne odbrane, Pokoj 77209</span>
+          </div>
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12,6 12,12 16,14"/>
+            </svg>
+            <span data-translate="footer_hours">Radno vrijeme: 8-23</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Desna kolona -->
+    <div class="footer-right">
+      <h3 data-translate="footer_social">Kontaktirajte nas</h3>
+      
+      <div class="social-links">
+        <a href="https://www.facebook.com/RestoranBiser/?locale=hr_HR" class="social-link" target="_blank" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/restoran_biser1978" class="social-link" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+      </div>
+      
+      <div class="footer-contact-methods">
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <a href="tel:037300400" data-translate="phone_value">037 300-400</a>
+        </div>
+        
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <a href="mailto:info@restoranbiser.ba">info@restoranbiser.ba</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p data-translate="footer_copyright">&copy; 2025 Restoran Biser | Sva prava zadržana</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="menu.js"></script>
+  <script src="translations.js"></script>
+
+</body>
+</html>
