@@ -11,11 +11,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Serviranje statičkih fajlova (HTML, CSS, JS)
-app.use(express.static(path.join(__dirname, '../')));
+app.use(express.static(__dirname));
 
 // Ruta za početnu stranicu
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Konfiguracija Nodemailer transportera (zajednička)
