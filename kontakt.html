@@ -20,7 +20,7 @@
       <a href="#" class="lang-link" data-lang="eng">ENG</a>
     </div>
 
- <div class="logo-container">
+   <div class="logo-container">
   <img src="images/biserrr (1) (1).png" alt="Biser Logo" class="logo-img">
 </div>
 <span class="logo-text" data-translate="nav_logo">Restoran Biser</span>
@@ -45,9 +45,9 @@
   </div>
 </section>
 
-<!-- Main Contact Section -->
+<!-- Main Contact Section with Map -->
 <section class="contact-main">
-  <div class="contact-container">
+  <div class="contact-container-with-map">
     
     <!-- Contact Information -->
     <div class="contact-info">
@@ -57,7 +57,6 @@
       <div class="contact-methods">
         
         <div class="contact-method">
-         
           <div class="contact-details">
             <span class="contact-label" data-translate="contact_address_label">Adresa</span>
             <div class="contact-value">
@@ -68,7 +67,6 @@
         </div>
 
         <div class="contact-method">
-        
           <div class="contact-details">
             <span class="contact-label" data-translate="contact_phone_label">Telefon</span>
             <div class="contact-value">
@@ -79,7 +77,6 @@
         </div>
 
         <div class="contact-method">
-         
           <div class="contact-details">
             <span class="contact-label" data-translate="contact_email_label">Email</span>
             <div class="contact-value">
@@ -90,7 +87,6 @@
         </div>
 
         <div class="contact-method">
-        
           <div class="contact-details">
             <span class="contact-label" data-translate="contact_hours_label">Radno vrijeme</span>
             <div class="contact-value">
@@ -100,76 +96,24 @@
           </div>
         </div>
 
-       
-
       </div>
     </div>
 
-    <!-- Contact Form -->
-    <div class="contact-form-section">
-      <h2 data-translate="contact_form_title">Pošaljite nam poruku</h2>
-      <p class="form-intro" data-translate="contact_form_intro">Popunite formu ispod i odgovoriće vam u najkraćem roku.</p>
-      
-      <form class="contact-form" id="contactForm">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name" data-translate="form_name">Ime i prezime *</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="phone" data-translate="form_phone">Telefon *</label>
-            <input type="tel" id="phone" name="phone" required>
-          </div>
-        </div>
-        
-        <div class="form-row">
-          <div class="form-group">
-            <label for="email" data-translate="form_email">Email *</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="subject" data-translate="form_subject">Tema</label>
-            <select id="subject" name="subject">
-              <option value="" data-translate="form_subject_select">Izaberite temu</option>
-              <option value="reservation" data-translate="form_subject_reservation">Rezervacija stola</option>
-              <option value="event" data-translate="form_subject_event">Organizacija događaja</option>
-              <option value="catering" data-translate="form_subject_catering">Catering usluge</option>
-              <option value="complaint" data-translate="form_subject_complaint">Žalba ili prijedlog</option>
-              <option value="info" data-translate="form_subject_info">Opće informacije</option>
-              <option value="other" data-translate="form_subject_other">Ostalo</option>
-            </select>
-          </div>
-        </div>
-        
-        <div class="form-group full-width">
-          <label for="message" data-translate="form_message">Poruka *</label>
-          <textarea id="message" name="message" required data-translate="form_message_placeholder" placeholder="Opišite vaš upit ili zahtjev..."></textarea>
-        </div>
-        
-        <button type="submit" class="form-submit">
-          <span data-translate="form_submit">Pošalji poruku</span>
-        </button>
-      </form>
+    <!-- Map beside contact info -->
+    <div class="contact-map">
+      <div class="map-embed">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2828.3610234928055!2d15.879492775527632!3d44.85494467107057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476140c616f3061b%3A0x1f8db135a0cdb615!2sRestoran%20Biser!5e0!3m2!1shr!2sba!4v1759058010609!5m2!1shr!2sba" 
+          width="600" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
     </div>
 
-  </div>
-</section>
-
-
-
-<!-- Map Section -->
-<section class="map-section">
-  <div class="map-container">
-    <div class="map-header">
-      <h2 data-translate="map_title">Naša lokacija</h2>
-      <p data-translate="map_description">Restoran Biser se nalazi u Pokoju, lako dostupan glavnim putevima sa dovoljno parking prostora.</p>
-    </div>
-    
-    <div class="map-embed">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2828.3610234928055!2d15.879492775527632!3d44.85494467107057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476140c616f3061b%3A0x1f8db135a0cdb615!2sRestoran%20Biser!5e0!3m2!1shr!2sba!4v1759058010609!5m2!1shr!2sba" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
-       
-    </div>
   </div>
 </section>
 
@@ -248,7 +192,6 @@
 
 <script src="translations.js"></script>
 <script src="script.js"></script>
-
 
 </body>
 </html>

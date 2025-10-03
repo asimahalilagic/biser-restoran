@@ -773,6 +773,69 @@ Object.assign(translations.eng, aboutTranslations.eng);
 // Then merge like this:
 Object.assign(translations.bos, menuTranslations.bos);
 Object.assign(translations.eng, menuTranslations.eng);
+const contactTranslations = {
+  "bos": {
+    // Existing translations...
+    
+    // Contact Page
+    "contact_hero_title": "Kontaktirajte nas",
+    "contact_hero_description": "Tu smo za sve vaše potrebe i pitanja",
+    
+    // Contact Info Section
+    "contact_info_title": "Kako do nas",
+    "contact_info_description": "Restoran Biser se nalazi u srcu Pokoja, lako dostupan iz svih pravaca. Kontaktirajte nas putem telefona, emaila ili nas direktno posjetite.",
+    
+    // Contact Methods
+    "contact_address_label": "Adresa",
+    "contact_address_note": "Blizu centra grada",
+    "contact_phone_label": "Telefon",
+    "contact_phone_note": "Rezervacije i informacije",
+    "contact_email_label": "Email",
+    "contact_email_note": "Za sve upite i rezervacije",
+    "contact_hours_label": "Radno vrijeme",
+    "contact_hours_daily": "Dnevno: 08:00 - 23:00",
+    "contact_hours_note": "Otvoreno svih dana u godini",
+    
+    // Map Section
+    "map_title": "Naša lokacija",
+    "map_description": "Restoran Biser se nalazi u Pokoju, lako dostupan glavnim putevima sa dovoljno parking prostora.",
+    
+    // Footer Social
+    "footer_social": "Kontaktirajte nas"
+  },
+  
+  "eng": {
+    // Contact Page
+    "contact_hero_title": "Contact Us",
+    "contact_hero_description": "We're here for all your needs and questions",
+    
+    // Contact Info Section
+    "contact_info_title": "How to Reach Us",
+    "contact_info_description": "Restaurant Biser is located in the heart of Pokoj, easily accessible from all directions. Contact us by phone, email, or visit us directly.",
+    
+    // Contact Methods
+    "contact_address_label": "Address",
+    "contact_address_note": "Near city center",
+    "contact_phone_label": "Phone",
+    "contact_phone_note": "Reservations and information",
+    "contact_email_label": "Email",
+    "contact_email_note": "For all inquiries and reservations",
+    "contact_hours_label": "Working Hours",
+    "contact_hours_daily": "Daily: 08:00 AM - 11:00 PM",
+    "contact_hours_note": "Open every day of the year",
+    
+    // Map Section
+    "map_title": "Our Location",
+    "map_description": "Restaurant Biser is located in Pokoj, easily accessible via main roads with ample parking space.",
+    
+    // Footer Social
+    "footer_social": "Contact Us"
+  }
+};
+
+// Merge sa postojećim translations objektom
+Object.assign(translations.bos, contactTranslations.bos);
+Object.assign(translations.eng, contactTranslations.eng);
 
 // Language switching functionality
 class LanguageSwitcher {
