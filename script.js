@@ -693,3 +693,48 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section);
   });
 });
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.mobile-menu-toggle');
+  const nav = document.querySelector('nav');
+  const body = document.body;
+  
+  if (!menuToggle) return; // Izlaz ako ne postoji hamburger button
+  
+  // Kreiraj overlay
+  const overlay = document.createElement('div');
+  overlay.className = 'mobile-menu-overlay';
+  body.appendChild(overlay);
+  
+  // Kloniraj navigaciju za mobile
+  const mobileNav = nav.cloneNode(true);
+  mobileNav.classList.add('mobile-menu');
+  body.appendChild(mobileNav);
+  
+  // Toggle funkcija
+  function toggleMenu() {
+    menuToggle.classList.toggle('active');
+    mobileNav.classList.toggle('active');
+    overlay.classList.toggle('active');
+    
+    // Spriječi scrolling kada je menu otvoren
+    if (mobileNav.classList.contains('active')) {
+      body.style.overflow = 'hidden';
+      overlay.style.display = 'block';
+    } else {
+      body.style.overflow = '';
+      overlay.style.display = 'none';
+    }
+  }
+  
+  // Event listeners
+  menuToggle.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', toggleMenu);
+  
+  // Zatvori menu kada se klikne na link
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function() {
+      toggleMenu();
+    });
+  });
+});

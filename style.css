@@ -36,7 +36,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 998;
   padding: 20px 0;
   transition: var(--transition-luxury);
   border-bottom: 1px solid rgba(212, 175, 55, 0.2);
@@ -122,6 +122,9 @@ header::before {
   color: var(--gold-primary);
   letter-spacing: 2px;
   text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 nav ul {
@@ -165,7 +168,217 @@ nav a:hover::after,
 nav a.active::after {
   width: 100%;
 }
+/* Mobile Menu Toggle */
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1002; /* Povećan z-index */
+  position: relative;
+}
 
+.hamburger-line {
+  width: 28px;
+  height: 3px;
+  background: var(--gold-primary);
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000; /* Ispod mobilnog menija ali iznad navbara */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+}
+
+/* Side Menu */
+nav.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--deep-black) 0%, var(--dark-charcoal) 100%);
+  z-index: 1002; /* Iznad overlay-a i navbara */
+  transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow-y: auto;
+  box-shadow: -5px 0 30px rgba(0,0,0,0.5);
+  padding: 80px 0 30px;
+}
+
+nav.mobile-menu.active {
+  right: 0;
+}
+
+nav.mobile-menu ul {
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+}
+
+nav.mobile-menu li {
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+nav.mobile-menu a {
+  display: block;
+  padding: 20px 30px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+nav.mobile-menu a:hover {
+  background: rgba(212, 175, 55, 0.1);
+  padding-left: 40px;
+}
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+  position: relative;
+}
+
+.hamburger-line {
+  width: 28px;
+  height: 3px;
+  background: var(--gold-primary);
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 998;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+}
+
+/* Side Menu */
+nav.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--deep-black) 0%, var(--dark-charcoal) 100%);
+  z-index: 999;
+  transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow-y: auto;
+  box-shadow: -5px 0 30px rgba(0,0,0,0.5);
+  padding: 80px 0 30px;
+}
+
+nav.mobile-menu.active {
+  right: 0;
+}
+
+nav.mobile-menu ul {
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+}
+
+nav.mobile-menu li {
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+nav.mobile-menu a {
+  display: block;
+  padding: 20px 30px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+nav.mobile-menu a:hover {
+  background: rgba(212, 175, 55, 0.1);
+  padding-left: 40px;
+}
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 20px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo-container {
+    order: 1;
+  }
+
+  .language-switcher {
+    order: 2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    order: 3;
+  }
+
+  nav:not(.mobile-menu) {
+    display: none;
+  }
+
+  /* Ostali responsive stilovi ostaju isti... */
+}
 /* Hero Section */
 .hero {
   height: 100vh;
@@ -889,7 +1102,7 @@ section {
 
 .contact-value {
   font-size: 16px;
-  color: white;
+  color: black;
   font-weight: 400;
 }
 
@@ -1049,7 +1262,232 @@ svg.contact-icon {
   color: #cccccc;
   letter-spacing: 1px;
 }
+/* Menu Navigation - Sticky with Dropdowns */
+.nav {
+  background: linear-gradient(135deg, var(--deep-black) 0%, var(--dark-charcoal) 100%);
+  padding: 20px 0;
+  position: sticky;
+  top: 90px;
+  z-index: 999;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  backdrop-filter: blur(20px);
+}
 
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.menu-nav-item {
+  position: relative;
+}
+
+.menu-nav-btn {
+  background: rgba(212, 175, 55, 0.1);
+  border: 2px solid var(--gold-primary);
+  color: var(--gold-primary);
+  padding: 12px 25px;
+  font-family: 'Crimson Text', serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.menu-nav-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--gold-primary), var(--gold-secondary));
+  transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: -1;
+}
+
+.menu-nav-btn:hover::before,
+.menu-nav-btn.active::before {
+  left: 0;
+}
+
+.menu-nav-btn:hover,
+.menu-nav-btn.active {
+  color: var(--deep-black);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+  border-color: var(--gold-accent);
+}
+
+.menu-nav-btn.active {
+  background: linear-gradient(45deg, var(--gold-primary), var(--gold-secondary));
+  color: var(--deep-black);
+  font-weight: 700;
+}
+
+/* Dropdown Arrow */
+.dropdown-arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+  margin-left: 5px;
+}
+
+.dropdown.active .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--deep-black);
+  border: 2px solid var(--gold-primary);
+  border-radius: 8px;
+  padding: 10px 0;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  z-index: 1000;
+  backdrop-filter: blur(20px);
+  margin-top: 10px;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown.active .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: var(--gold-primary);
+  text-decoration: none;
+  font-family: 'Crimson Text', serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--gold-accent);
+  border-left-color: var(--gold-primary);
+  transform: translateX(5px);
+}
+
+/* Responsive for Menu Nav */
+@media (max-width: 968px) {
+  .nav {
+    top: 90px;
+    padding: 15px 0;
+  }
+
+  .nav-container {
+    padding: 0 20px;
+    gap: 12px;
+  }
+
+  .menu-nav-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .dropdown-menu {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 12px 0;
+    top: 150px;
+  }
+
+  .nav-container {
+    padding: 0 15px;
+    gap: 8px;
+  }
+
+  .menu-nav-btn {
+    padding: 8px 15px;
+    font-size: 13px;
+  }
+
+  .dropdown-menu {
+    min-width: 180px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+  }
+
+  .dropdown:hover .dropdown-menu,
+  .dropdown.active .dropdown-menu {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .dropdown-menu a {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    top: 170px;
+    padding: 10px 0;
+  }
+
+  .nav-container {
+    padding: 0 10px;
+    gap: 6px;
+  }
+
+  .menu-nav-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .dropdown-arrow {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+
+  .dropdown-menu {
+    min-width: 160px;
+    border-radius: 8px;
+  }
+
+  .dropdown-menu a {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+}
 /* Menu Page */
 .menu-hero {
   height: 60vh;
@@ -1431,68 +1869,34 @@ svg.contact-icon {
   margin-bottom: 30px;
   letter-spacing: 1px;
 }
-
-.contact-form-section {
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(255, 255, 255, 0.9));
-  padding: 50px 40px;
-  border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(212, 175, 55, 0.15);
-  border: 1px solid rgba(212, 175, 55, 0.3);
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-.form-submit {
-  background: linear-gradient(45deg, var(--gold-primary), var(--gold-secondary));
-  color: var(--deep-black);
-  padding: 18px 40px;
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
-  margin-top: 20px;
-}
-
-.form-submit:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
-}
-
-/* Map Section */
-.map-section {
-  background: var(--deep-black);
-  padding: 100px 0;
-}
-
-.map-container {
-  max-width: 1200px;
+/* Contact page with map beside info */
+.contact-container-with-map {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 80px 40px;
 }
 
-.map-embed {
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-  border: 2px solid rgba(212, 175, 55, 0.3);
+.contact-map {
+  position: relative;
+  min-height: 500px;
 }
 
-.map-embed iframe {
+.contact-map .map-embed {
   width: 100%;
-  height: 450px;
-  border: none;
-  filter: grayscale(30%) contrast(1.1);
-  transition: filter 0.4s ease;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  filter: grayscale(20%) contrast(1.1);
 }
 
 /* Responsive */
@@ -1507,8 +1911,75 @@ svg.contact-icon {
     gap: 50px;
   }
 
+  .contact-container-with-map {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-map {
+    min-height: 400px;
+  }
+
+  .contact-map iframe {
+    min-height: 400px;
+  }
+
   .menu-grid {
     grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .beverages-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .nav {
+    top: 90px;
+    padding: 15px 0;
+  }
+
+  .nav-container {
+    padding: 0 20px;
+    gap: 12px;
+  }
+
+  .menu-nav-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .dropdown-menu {
+    min-width: 200px;
+  }
+
+  .carousel-container {
+    height: 400px;
+  }
+
+  .carousel-slide img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Forme u tablet modu */
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .reservation-form {
+    padding: 35px 25px;
+  }
+
+  .reservation-contact {
+    padding: 35px 25px;
   }
 }
 
@@ -1516,31 +1987,67 @@ svg.contact-icon {
   .header-container {
     padding: 0 20px;
     flex-direction: column;
-    
+    align-items: center;
+    gap: 10px;
+   
   }
 
   .logo-container {
     order: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
 
-  .language-switcher {
+  .logo-text {
+    position: static;
+    transform: none;
+    font-size: 20px;
     order: 2;
   }
 
-  nav {
-    order: 3;
+  .language-switcher {
+    position: absolute;
+    left: 20px;
+    top: 20px;
   }
 
-  nav ul {
-    gap: 20px;
+  .mobile-menu-toggle {
+    position: absolute;
+    right: 20px;
+    top: 20px;
   }
 
-  nav a {
-    font-size: 14px;
+  nav:not(.mobile-menu) {
+    display: none;
+  }
+
+  /* Forme i kontakt sekcija */
+  .reservation-form-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .reservation-form {
+    padding: 30px 20px;
+  }
+
+  .reservation-contact {
+    padding: 30px 20px;
+  }
+
+  .contact-method {
+    padding: 15px 0;
   }
 
   .hero {
-    padding-top: 160px;
+    padding-top: 180px;
+    height: 80vh;
   }
 
   .hero h1 {
@@ -1555,6 +2062,12 @@ svg.contact-icon {
 
   .carousel-container {
     height: 350px;
+  }
+
+  .carousel-slide img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
   }
 
   .carousel-btn {
@@ -1596,14 +2109,98 @@ svg.contact-icon {
   }
 
   .gallery-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .gallery-item {
+    aspect-ratio: 16/9;
+  }
+
+  .gallery-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .nav {
+    padding: 12px 0;
+    top: 150px;
+  }
+
+  .nav-container {
+    padding: 0 15px;
+    gap: 8px;
+  }
+
+  .menu-nav-btn {
+    padding: 8px 15px;
+    font-size: 13px;
+  }
+
+  .dropdown-menu {
+    min-width: 180px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+  }
+
+  .menu-nav-item:hover .dropdown-menu {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .dropdown-menu a {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .menu-grid {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .menu-item {
+    padding: 20px;
+  }
+
+  .contact-info,
+  .contact-form-section {
+    padding: 40px 25px;
+  }
+
+  .map-embed iframe {
+    height: 350px;
   }
 }
 
 @media (max-width: 480px) {
   .logo-text {
-    font-size: 20px;
+    font-size: 16px;
+  }
+
+  .logo-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header-container {
+    padding: 15px 20px;
+  }
+
+  .language-switcher {
+    font-size: 11px;
+    top: 15px;
+    left: 15px;
+  }
+
+  .mobile-menu-toggle {
+    top: 15px;
+    right: 15px;
+  }
+
+  .hero {
+    padding-top: 200px;
+    height: 70vh;
   }
 
   .hero h1 {
@@ -1614,11 +2211,165 @@ svg.contact-icon {
     font-size: 2rem;
   }
 
+  /* Forme optimizacija za male ekrane */
+  .reservation-form {
+    padding: 25px 15px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .btn-reservation {
+    padding: 15px 30px;
+    font-size: 14px;
+  }
+
+  .reservation-contact {
+    padding: 25px 15px;
+  }
+
+  .reservation-contact h3 {
+    font-size: 20px;
+  }
+
+  .contact-method {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 0;
+    gap: 8px;
+  }
+
+  .contact-label {
+    font-size: 12px;
+  }
+
+  .contact-value {
+    font-size: 14px;
+  }
+
+  /* Contact stranica */
+  .contact-info {
+    padding: 30px 20px;
+  }
+
+  .contact-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-container-with-map {
+    padding: 40px 15px;
+    gap: 30px;
+  }
+
+  .contact-map {
+    min-height: 300px;
+  }
+
+  .contact-map iframe {
+    min-height: 300px;
+  }
+
   .menu-item {
-    padding: 20px 15px;
+    padding: 18px 15px;
+  }
+
+  .menu-item h4 {
+    font-size: 18px;
+  }
+
+  .price {
+    font-size: 16px;
   }
 
   .gallery-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gallery-item {
+    aspect-ratio: 4/3;
+    max-height: 300px;
+  }
+
+  .gallery-item img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .carousel-container {
+    height: 280px;
+  }
+
+  .carousel-slide img {
+    object-fit: cover;
+    object-position: center;
+    min-height: 280px;
+  }
+
+  .weddings-image {
+    margin: 0 -20px;
+  }
+
+  .nav {
+    top: 170px;
+    padding: 10px 0;
+  }
+
+  .nav-container {
+    padding: 0 10px;
+    gap: 6px;
+  }
+
+  .menu-nav-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .dropdown-arrow {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+
+  .dropdown-menu {
+    min-width: 160px;
+    border-radius: 8px;
+  }
+
+  .dropdown-menu a {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+
+  .beverage-section {
+    padding: 25px 20px;
+  }
+
+  .about-content,
+  .menu-content,
+  .story-text {
+    padding: 0 15px;
+  }
+
+  .map-embed iframe {
+    height: 300px;
+  }
+
+  header {
+    padding: 15px 0;
   }
 }

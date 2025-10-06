@@ -17,6 +17,11 @@
       <span>|</span>
       <a href="#" class="lang-link" data-lang="eng">ENG</a>
     </div>
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+  <span class="hamburger-line"></span>
+  <span class="hamburger-line"></span>
+  <span class="hamburger-line"></span>
+</button>
 
   <div class="logo-container">
   <img src="images/biserrr (1) (1).png" alt="Biser Logo" class="logo-img">
@@ -42,83 +47,89 @@
     </div>
   </section>
 
-  <!-- Menu Navigation -->
-  <section class="nav">
-    <div class="nav-container">
-      <div class="menu-nav-item">
-        <button class="menu-nav-btn active" data-category="all" data-translate="nav_all">Svi</button>
-      </div>
-      
-      <div class="menu-nav-item dropdown">
-        <button class="menu-nav-btn dropdown-btn" data-category="predjela" data-translate="nav_appetizers">
-          Predjela <span class="dropdown-arrow">▼</span>
-        </button>
-        <div class="dropdown-menu">
-          <a href="#" data-category="hladna-predjela" data-translate="cold_appetizers">Hladna predjela</a>
-          <a href="#" data-category="topla-predjela" data-translate="hot_appetizers">Topla predjela</a>
-          <a href="#" data-category="juhe-corbe" data-translate="soups_stews">Juhe i čorbe</a>
-        </div>
-      </div>
-
-      <div class="menu-nav-item dropdown">
-        <button class="menu-nav-btn dropdown-btn" data-category="glavna-jela" data-translate="nav_main_dishes">
-          Glavna jela <span class="dropdown-arrow">▼</span>
-        </button>
-        <div class="dropdown-menu">
-          <a href="#" data-category="rostilj" data-translate="grilled_dishes">Jela sa roštilja</a>
-          <a href="#" data-category="po-narudzbi" data-translate="made_to_order">Jela po narudžbi</a>
-          <a href="#" data-category="riblji" data-translate="fish_specialties">Riblji specijaliteti</a>
-          <a href="#" data-category="planstek" data-translate="planstek">Planstek</a>
-          <a href="#" data-category="biftek" data-translate="steak">Biftek</a>
-          <a href="#" data-category="pecenja" data-translate="roasts">Pečenja</a>
-        </div>
-      </div>
-
-      <div class="menu-nav-item">
-        <button class="menu-nav-btn" data-category="pizza" data-translate="pizza">Pizza</button>
-      </div>
-
-      <div class="menu-nav-item dropdown">
-        <button class="menu-nav-btn dropdown-btn" data-category="salate" data-translate="nav_salads">
-          Salate <span class="dropdown-arrow">▼</span>
-        </button>
-        <div class="dropdown-menu">
-          <a href="#" data-category="salate-kao-jela" data-translate="salads_main">Salate kao jela</a>
-          <a href="#" data-category="salate-kao-predjela" data-translate="salads_appetizers">Salate kao predjela</a>
-        </div>
-      </div>
-      <div class="menu-nav-item">
-        <button class="menu-nav-btn" data-category="desert" data-translate="desserts">Desert</button>
-      </div>
-
-      <div class="menu-nav-item dropdown">
-        <button class="menu-nav-btn dropdown-btn" data-category="dodaci" data-translate="nav_sides">
-          Dodaci i prilozi <span class="dropdown-arrow">▼</span>
-        </button>
-        <div class="dropdown-menu">
-          <a href="#" data-category="prilozi" data-translate="side_dishes">Prilozi</a>
-          <a href="#" data-category="pogacice" data-translate="stuffed_rolls">Pogačice</a>
-          <a href="#" data-category="peciva" data-translate="pastries">Peciva</a>
-        </div>
-      </div>
-
-      <div class="menu-nav-item dropdown">
-        <button class="menu-nav-btn dropdown-btn" data-category="pica" data-translate="nav_drinks">
-          Pića <span class="dropdown-arrow">▼</span>
-        </button>
-        <div class="dropdown-menu">
-          <a href="#" data-category="topli-napici" data-translate="hot_drinks">Topli napici</a>
-          <a href="#" data-category="negazirani" data-translate="non_carbonated">Negazirani napici</a>
-          <a href="#" data-category="gazirani" data-translate="soft_drinks">Gazirani napici</a>
-          <a href="#" data-category="pivo" data-translate="beer">Pivo</a>
-          <a href="#" data-category="vina" data-translate="wines">Vina</a>
-          <a href="#" data-category="likeri" data-translate="liqueurs">Likeri</a>
-          <a href="#" data-category="zestoka" data-translate="spirits">Žestoka pića</a>
-        </div>
+<!-- Menu Navigation -->
+<section class="nav">
+  <div class="nav-container">
+    
+    <div class="menu-nav-item dropdown">
+      <button class="menu-nav-btn dropdown-btn" data-category="predjela">
+        <span data-translate="nav_appetizers">Predjela</span>
+        <span class="dropdown-arrow">▼</span>
+      </button>
+      <div class="dropdown-menu">
+        <a href="#" data-category="hladna-predjela" data-translate="cold_appetizers">Hladna predjela</a>
+        <a href="#" data-category="topla-predjela" data-translate="hot_appetizers">Topla predjela</a>
+        <a href="#" data-category="juhe-corbe" data-translate="soups_stews">Juhe i čorbe</a>
       </div>
     </div>
-  </section>
 
+    <div class="menu-nav-item dropdown">
+      <button class="menu-nav-btn dropdown-btn" data-category="glavna-jela">
+        <span data-translate="nav_main_dishes">Glavna jela</span>
+        <span class="dropdown-arrow">▼</span>
+      </button>
+      <div class="dropdown-menu">
+        <a href="#" data-category="rostilj" data-translate="grilled_dishes">Jela sa roštilja</a>
+        <a href="#" data-category="po-narudzbi" data-translate="made_to_order">Jela po narudžbi</a>
+        <a href="#" data-category="riblji" data-translate="fish_specialties">Riblji specijaliteti</a>
+        <a href="#" data-category="planstek" data-translate="planstek">Planstek</a>
+        <a href="#" data-category="biftek" data-translate="steak">Biftek</a>
+        <a href="#" data-category="pecenja" data-translate="roasts">Pečenja</a>
+      </div>
+    </div>
+
+    <div class="menu-nav-item">
+      <button class="menu-nav-btn" data-category="pizza">
+        <span data-translate="pizza">Pizza</span>
+      </button>
+    </div>
+
+    <div class="menu-nav-item dropdown">
+      <button class="menu-nav-btn dropdown-btn" data-category="salate">
+        <span data-translate="nav_salads">Salate</span>
+        <span class="dropdown-arrow">▼</span>
+      </button>
+      <div class="dropdown-menu">
+        <a href="#" data-category="salate-kao-jela" data-translate="salads_main">Salate kao jela</a>
+        <a href="#" data-category="salate-kao-predjela" data-translate="salads_appetizers">Salate kao predjela</a>
+      </div>
+    </div>
+    
+    <div class="menu-nav-item">
+      <button class="menu-nav-btn" data-category="desert">
+        <span data-translate="desserts">Desert</span>
+      </button>
+    </div>
+
+    <div class="menu-nav-item dropdown">
+      <button class="menu-nav-btn dropdown-btn" data-category="dodaci">
+        <span data-translate="nav_sides">Dodaci i prilozi</span>
+        <span class="dropdown-arrow">▼</span>
+      </button>
+      <div class="dropdown-menu">
+        <a href="#" data-category="prilozi" data-translate="side_dishes">Prilozi</a>
+        <a href="#" data-category="pogacice" data-translate="stuffed_rolls">Pogačice</a>
+        <a href="#" data-category="peciva" data-translate="pastries">Peciva</a>
+      </div>
+    </div>
+
+    <div class="menu-nav-item dropdown">
+      <button class="menu-nav-btn dropdown-btn" data-category="pica">
+        <span data-translate="nav_drinks">Pića</span>
+        <span class="dropdown-arrow">▼</span>
+      </button>
+      <div class="dropdown-menu">
+        <a href="#" data-category="topli-napici" data-translate="hot_drinks">Topli napici</a>
+        <a href="#" data-category="negazirani" data-translate="non_carbonated">Negazirani napici</a>
+        <a href="#" data-category="gazirani" data-translate="soft_drinks">Gazirani napici</a>
+        <a href="#" data-category="pivo" data-translate="beer">Pivo</a>
+        <a href="#" data-category="vina" data-translate="wines">Vina</a>
+        <a href="#" data-category="likeri" data-translate="liqueurs">Likeri</a>
+        <a href="#" data-category="zestoka" data-translate="spirits">Žestoka pića</a>
+      </div>
+    </div>
+  </div>
+</section>
   <!-- Menu Content -->
   <section class="menu-content">
     <div class="menu-container">
@@ -1600,8 +1611,9 @@ kukuruz, praziluk</p>
   </div>
 </footer>
 
-  <script src="menu.js"></script>
-  <script src="translations.js"></script>
+<script src="menu.js"></script>
+<script src="translations.js"></script>
+<script src="script.js"></script> 
 
 </body>
 </html>
